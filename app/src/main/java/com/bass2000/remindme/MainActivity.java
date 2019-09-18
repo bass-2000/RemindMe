@@ -12,7 +12,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
-import com.bass2000.remindme.adapter.TabsPagerFragmentsAdapter;
+import com.bass2000.remindme.adapter.TabsFragmentsAdapter;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initTabs() {
         viewPager = findViewById(R.id.view_pager);
-        TabsPagerFragmentsAdapter adapter = new TabsPagerFragmentsAdapter(getSupportFragmentManager(), 0);
+        TabsFragmentsAdapter adapter = new TabsFragmentsAdapter(this, getSupportFragmentManager(), 0);
         viewPager.setAdapter(adapter);
         TabLayout tabLayout = findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
